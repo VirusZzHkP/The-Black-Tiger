@@ -173,8 +173,8 @@ echo
 echo
 echo "#####################"
 echo "[1] Back to menu"
-echo "[2] Volver a ejecutar"
-echo "[3] Salir"
+echo "[2] Rerun"
+echo "[3] Exit"
 echo "#####################"
 echo
 read -p "Choose an option: " opc2

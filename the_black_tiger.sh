@@ -13,7 +13,7 @@ echo "                                [6] Telephone Number Information   🔍"
 echo "                                [7] Public IP Information          🔍"
 echo "                                [8] YouTube Video/Channel Information  🔍"
 echo "                                [9] Image Information            🔍"
-echo "                                [99] -------------> Salir"" <--------------- 🔍"
+echo "                                [99] -------------> Exit"" <--------------- 🔍"
 echo
 read -p "[*] Choose an option: " opc1
 	case $opc1 in
