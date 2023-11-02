@@ -6,17 +6,17 @@ source requirements/0.sh
 Title
 echo "[3] Information about a Nickname/Alias/Nickname"
 echo
-echo "=========================================================="
+echo "======================================================================"
 echo "[1] Search in 574 social networks for an account with that Nickname"" |"
-echo "----------------------------------------------------------"
-echo "[2] Use Google Dorks (See where that Nickname is published)""|"
-echo "----------------------------------------------------------"
-echo "[3] Use specific search engine""                             |"
-echo "----------------------------------------------------------"
-echo "[4] Everything (Social Media, Websites, Images, Posts, etc.)""    |"
-echo "----------------------------------------------------------"
-echo "[5] Back to menu""                                       |"
-echo "=========================================================="
+echo "----------------------------------------------------------------------"
+echo "[2] Use Google Dorks (See where that Nickname is published)""         |"
+echo "----------------------------------------------------------------------"
+echo "[3] Use specific search engine""                                      |"
+echo "----------------------------------------------------------------------"
+echo "[4] Everything (Social Media, Websites, Images, Posts, etc.)""        |"
+echo "----------------------------------------------------------------------"
+echo "[5] Back to menu""                                                    |"
+echo "======================================================================"
 echo
 read -p "Choose an option: " opc1
 	case $opc1 in

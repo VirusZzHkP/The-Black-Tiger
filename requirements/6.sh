@@ -7,19 +7,19 @@ source requirements/0.sh
 Title
 echo "[6] Information about a Telephone Number"
 echo
-echo "============================================================="
+echo "================================================================="
 echo "[1] See the Company and Country of the Telephone Number""        |"
-echo "-------------------------------------------------------------"
+echo "-----------------------------------------------------------------"
 echo "[2] See if you are registered on Instagram, Amazon or Snapchat"" |"
-echo "-------------------------------------------------------------"
-echo "[3] Use Google Dorks (See where the Phone has been published)""|"
-echo "-------------------------------------------------------------"
-echo "[4] Try to extract the real name of the owner of the Phone""  |"
-echo "-------------------------------------------------------------"
+echo "-----------------------------------------------------------------"
+echo "[3] Use Google Dorks (See where the Phone has been published)""  |"
+echo "-----------------------------------------------------------------"
+echo "[4] Try to extract the real name of the owner of the Phone""     |"
+echo "-----------------------------------------------------------------"
 echo "[5] Everything (Company, Networks, Google Dorks, Owner Name))""  |"
-echo "-------------------------------------------------------------"
-echo "[6] Back to menu""                                          |"
-echo "============================================================="
+echo "-----------------------------------------------------------------"
+echo "[6] Back to menu""                                               |"
+echo "================================================================="
 echo
 read -p "Choose an option: " opc1
 	case $opc1 in
@@ -38,7 +38,7 @@ read -p "Choose an option: " opc1
 				;;
 			2 )	echo
 				read -p "[*] Write the country code of the Target Phone (Ex: 91): " code
-				read -p "[*] Write the phone number of the Target (Ex: 9876549036): " phone
+				read -p "[*] Write the phone number of the Target (Ex: 1234569876): " phone
 				echo
 				echo "#############################"
 				echo "[☢] Phone: +$code $phone"
@@ -48,7 +48,7 @@ read -p "Choose an option: " opc1
 				;;
 			3 )	echo
 				read -p "[*] Write the country code of the Target Phone (Ex: 91): " code
-				read -p "[*] Write the phone number of the Target (Ex: 9876549036): " phone
+				read -p "[*] Write the phone number of the Target (Ex: 1234569876): " phone
 				read -p "[*] Keyword /Optional/ (Ex: Name, Email, Location, etc.): " info
 				echo
 				echo "#############################"
@@ -68,7 +68,7 @@ read -p "Choose an option: " opc1
 				;;
 			5 )	echo
 				read -p "[*] Write the country code of the Target Phone (Ex: 91): " code
-				read -p "[*] Write the phone number of the Target (Ex: 9876549036): " phone
+				read -p "[*] Write the phone number of the Target (Ex: 1234569876): " phone
 				read -p "[*] Keyword /Optional/ (Ex: Name, Email, Location, etc.): " info
 				echo
 				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) See the Company and Country of the Telephone Number (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"

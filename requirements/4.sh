@@ -65,7 +65,7 @@ read -p "Choose an option: " opc1
 				echo "[*] Posts: " `cat requirements/results/Ig-$username.txt | awk -F= '/"num"/ {print $3}' | cut -c 2- | rev | cut -c3- | rev | awk 'NR==1{print}'`
 				echo "[*] Followers: " `cat requirements/results/Ig-$username.txt | awk -F= '/"num"/ {print $3}' | cut -c 2- | rev | cut -c3- | rev | awk 'NR==2{print}'`
 				echo "[*] Following: " `cat requirements/results/Ig-$username.txt | awk -F= '/"num"/ {print $3}' | cut -c 2- | rev | cut -c3- | rev | awk 'NR==3{print}'`
-				echo "[*] Estado de la cuenta(Vacio = Publica): " `cat requirements/results/Ig-$username.txt | awk -F= '/This account/ {print}' | cut -c 18- | rev | cut -c7- | rev`
+				echo "[*] Account Status: " `cat requirements/results/Ig-$username.txt | awk -F= '/This account/ {print}' | cut -c 18- | rev | cut -c7- | rev`
 				echo
 				echo "[*] Profile picture: " `cat requirements/results/Ig-$username.txt | awk '/href/&&/scontent/ {print $2}' | cut -c 7- | rev | cut -c10- | rev`
 				echo

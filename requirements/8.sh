@@ -6,15 +6,15 @@ source requirements/0.sh
 Title
 echo "[8] YouTube Video/Channel Information"
 echo
-echo "======================================"
-echo "[1] Information about a Video / Channel""  |"
-echo "--------------------------------------"
-echo "[2] Statistics of a Video / Channel"" |"
-echo "--------------------------------------"
+echo "============================================="
+echo "[1] Information about a Video / Channel""    |"
+echo "---------------------------------------------"
+echo "[2] Statistics of a Video / Channel""        |"
+echo "---------------------------------------------"
 echo "[3] Everything (Information and Statistics)""|"
-echo "--------------------------------------"
-echo "[4] Back to menu""                   |"
-echo "======================================"
+echo "---------------------------------------------"
+echo "[4] Back to menu""                           |"
+echo "============================================="
 echo
 read -p "Choose an option: " opc1
 	case $opc1 in

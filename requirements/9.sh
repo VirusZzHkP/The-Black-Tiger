@@ -6,19 +6,19 @@ source requirements/0.sh
 Title
 echo "[9] Information about an Image"
 echo
-echo "======================================"
-echo "[1] Extract Image Metadata""   |"
-echo "--------------------------------------"
-echo "[2] Google Image Search""  |"
-echo "--------------------------------------"
-echo "[3] Use specific search engine""         |"
-echo "--------------------------------------"
-echo "[4] Enlarge an Image with x4 quality""|"
-echo "--------------------------------------"
-echo "[5] All (Medata, Search Engines, Tools)""|"
-echo "--------------------------------------"
-echo "[6] Back to menu""                   |"
-echo "======================================"
+echo "=========================================="
+echo "[1] Extract Image Metadata""              |"
+echo "------------------------------------------"
+echo "[2] Google Image Search""                 |"
+echo "------------------------------------------"
+echo "[3] Use specific search engine""          |"
+echo "------------------------------------------"
+echo "[4] Enlarge an Image with x4 quality""    |"
+echo "------------------------------------------"
+echo "[5] All (Medata, Search Engines, Tools)"" |"
+echo "------------------------------------------"
+echo "[6] Back to menu""                        |"
+echo "=========================================="
 echo
 read -p "Choose an option: " opc1
 	case $opc1 in

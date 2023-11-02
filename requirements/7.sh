@@ -6,19 +6,19 @@ source requirements/0.sh
 Title
 echo "[7] Information about a Public IP"
 echo
-echo "=========================================================="
-echo "[1] See which Internet Service Provider the IP belongs to""       |"
-echo "----------------------------------------------------------"
-echo "[2] Geolocation of the exact city of the IP""         |"
-echo "----------------------------------------------------------"
-echo "[3] Search for open ports and their services ""         |"
-echo "----------------------------------------------------------"
-echo "[4] Check the Status of an IP (See if it is down) ""   |"
-echo "----------------------------------------------------------"
-echo "[5] All (Company, Geolocation, Ports, State)     ""    |"
-echo "----------------------------------------------------------"
-echo "[6] Back to menu""                                       |"
-echo "=========================================================="
+echo "============================================================"
+echo "[1] See which Internet Service Provider the IP belongs to"" |"
+echo "------------------------------------------------------------"
+echo "[2] Geolocation of the exact city of the IP""               |"
+echo "------------------------------------------------------------"
+echo "[3] Search for open ports and their services ""             |"
+echo "------------------------------------------------------------"
+echo "[4] Check the Status of an IP (See if it is down) ""        |"
+echo "------------------------------------------------------------"
+echo "[5] All (Company, Geolocation, Ports, State)     ""         |"
+echo "------------------------------------------------------------"
+echo "[6] Back to menu""                                          |"
+echo "============================================================"
 echo
 read -p "Choose an option: " opc1
 	case $opc1 in
