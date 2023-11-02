@@ -28,8 +28,8 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
 	echo
 	echo "================================="
 	echo "[1] Install requirements""         |"
-	echo "[2] Configurar API veriphone.io"" |"
-	echo "[3] Configure veriphone.io API""       |"
+	echo "[2] Configure veriphone.io API"" |"
+	echo "[3] Configure shodan.io API""       |"
 	echo "[4] Configure ZoomEye API""      |"
 	echo "[5] Back to menu""              |"
 	echo "================================="
