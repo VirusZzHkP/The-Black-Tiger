@@ -79,4 +79,4 @@ This project was inspired by XDeadHackerX's The Spy's Job, which provided the fo
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/hrisikesh)
 
-Copyright © 2023, VirusZzWarning
+> Copyright © 2023, VirusZzWarning
