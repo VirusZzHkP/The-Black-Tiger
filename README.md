@@ -3,6 +3,9 @@
 
 > M@d3 With ❤ - VirusZzWarning
 
+![GitHub top language](https://img.shields.io/github/languages/top/VirusZzHkP/The-Black-Tiger?color=red&style=for-the-badge)
+[![GitHub license](https://img.shields.io/github/license/VirusZzHkP/The-Black-Tiger?color=yellow&style=for-the-badge)](https://github.com/VirusZzHkP/DirectoryDownloader/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/VirusZzHkP/The-Black-Tiger?color=green&style=for-the-badge)](https://github.com/VirusZzHkP/DirectoryDownloader/stargazers)
 ---
 
 **The_Black_Tiger** tool is focused on* **OSINT** *almost all areas* **(People, Nicknames, Social Networks, Emails, Phone Numbers, Web Pages, Public IPs and Images)** *My idea was to collect and automate all the most Advanced OSINT techniques possible in a single Tool and thus work in the most comfortable and fast way possible, since we only have to give a couple of clicks and it will only start collecting and displaying in an orderly and classified manner all the information. All Sections are separated into parts in case you only want to extract a specific type of information, but it also has the penultimate option that combines all the Options so that it can extract everything it is capable of from the data that we have entered. Tell you that I will be updating the repository, adding new things and solving errors.
@@ -39,13 +42,13 @@
 
 **2)** sudo apt-get install git
 
-**3)** git clone to be updated!!!
+**3)** git clone https://github.com/VirusZzHkP/The-Black-Tiger
 
 **4)** cd the_black_tiger
 
 **5)** chmod 777 the_black_tiger.sh
 
-**6)** try the_black_tiger.sh
+**6)** ./the_black_tiger.sh
 
 **7)** We mark Option 0 and then 1 to install the dependencies (Only mark the first time)
 
@@ -76,4 +79,4 @@ This project was inspired by XDeadHackerX's The Spy's Job, which provided the fo
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/hrisikesh)
 
-Copyright © 2023, VirusZzWarning
+> Copyright © 2023, VirusZzWarning
