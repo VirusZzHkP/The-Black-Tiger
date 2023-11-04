@@ -81,6 +81,7 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
 					sudo apt install gedit -y
 					sudo apt install wpscan -y
 					sudo apt install firefox-esr -y
+					sudo apt-get install libcanberra-gtk-module
 					sudo pip3 install zoomeye
 
 					sudo rm -r Cloudmare
