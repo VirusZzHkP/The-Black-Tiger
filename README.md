@@ -48,7 +48,7 @@
 
 **5)** chmod 777 the_black_tiger.sh
 
-**6)** try the_black_tiger.sh
+**6)** ./the_black_tiger.sh
 
 **7)** We mark Option 0 and then 1 to install the dependencies (Only mark the first time)
 
