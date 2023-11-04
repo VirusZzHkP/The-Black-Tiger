@@ -16,23 +16,25 @@
 
 ## 💡 Features 💡
 
-✅ **Web Pages** --> [*WhatWeb, Whois, Advanced Port Scanner, Server Information, Try to Extract Real IP from Server with CloudFlare, SSL Encryption, List All URLs of a Domain, Information WordPress Website, Extract Workers, Emails and Phone Numbers, List Domains, Google Dorks, Ping a Website from Multiple Countries*]
+✅ **Web Pages** --> *WhatWeb, Whois, Advanced Port Scanner, Server Information, Try to Extract Real IP from Server with CloudFlare, SSL Encryption, List All URLs of a Domain, Information WordPress Website, Extract Workers, Emails and Phone Numbers, List Domains, Google Dorks, Ping a Website from Multiple Countries*
 
-✅ **People** --> [*Google Dorks, Social Networks, Images, Posts, etc*]
+✅ **People** --> *Google Dorks, Social Networks, Images, Posts, etc*
 
-✅ **Nicknames/Alias** --> [*Google Dorks, Search 574 Social Networks for an account with that Nick, Images, Posts*]
+✅ **Nicknames/Alias** --> *Google Dorks, Search 574 Social Networks for an account with that Nick, Images, Posts*
 
-✅ **Social Networks** --> [*Instagram/TikTok/Twitter/Twitch/(GitHub + email) Account Information = without having an account*]
+✅ **Social Networks** --> *Instagram/TikTok/Twitter/Twitch/(GitHub + email) Account Information = without having an account*
 
-✅ **Emails** --> [*Email Information, Verify the existence of an Email, Search 121 Social Networks for an account with that Email, Search GitHub Account linked to the Email, Google Dorks*]
+✅ **Emails** --> *Email Information, Verify the existence of an Email, Search 121 Social Networks for an account with that Email, Search GitHub Account linked to the Email, Google Dorks*
 
-✅ **Phone Numbers** --> [*Company (ISP), See if you are registered on Instagram/Amazon/Snapchat, Google Dorks, Try to extract the Owner's Name*]
+✅ **Phone Numbers** --> *Company (ISP), See if you are registered on Instagram/Amazon/Snapchat, Google Dorks, Try to extract the Owner's Name*
 
-✅ **Public IPs** --> [*Company (ISP), Geolocation of the exact city, Search for open ports with their services/version, Web Ping from several Countries*]
+✅ **Public IPs** --> *Company (ISP), Geolocation of the exact city, Search for open ports with their services/version, Web Ping from several Countries*
 
-✅ **YouTube Videos/Channels** --> [**Videos:** *Publication Date and Time, Title, Description, Thumbnail Image URL (Various sizes), Statistics (views , likes, comments and favorites), Geolocation (If installed), Status, Video Details (Duration, dimensions, definition, projection), Video Category, Thumbnails.* **Channel:** *Date and Time of creation Channel, Title, Description, Thumbnail Image URL (Various sizes), Location (If enabled), Statistics (Total video views, subscribers, total videos), Keywords (#), Playlists, Status , Categories*]
+✅ **YouTube Videos/Channels** --> **Videos:** *Publication Date and Time, Title, Description, Thumbnail Image URL (Various sizes), Statistics (views , likes, comments and favorites), Geolocation (If installed), Status, Video Details (Duration, dimensions, definition, projection), Video Category, Thumbnails.* **Channel:** *Date and Time of creation Channel, Title, Description, Thumbnail Image URL (Various sizes), Location (If enabled), Statistics (Total video views, subscribers, total videos), Keywords (#), Playlists, Status , Categories*
 
-✅ **Images** --> [*Metadata, Google Search Engine, Specific Image Search Engine, Magnify an image x4 without almost losing image quality*]
+✅ **Images** --> *Metadata, Google Search Engine, Specific Image Search Engine, Magnify an image x4 without almost losing image quality*
+
+✅ **Record Search** --> *It searches for publicly available informations or leaked informations about any Email, Username, License Plate, First Name, Last Name, Password, Domain Name, IP address,Physical Address, Birth Year*
 
 ## 🛠 Install Tool 🛠
 
