@@ -42,7 +42,7 @@
 
 **2)** sudo apt-get install git
 
-**3)** git clone to be updated!!!
+**3)** git clone https://github.com/VirusZzHkP/The-Black-Tiger
 
 **4)** cd the_black_tiger
 
