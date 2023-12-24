@@ -81,4 +81,13 @@ This project was inspired by XDeadHackerX's The Spy's Job, which provided the fo
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/hrisikesh)
 
+
+## Socials
+
+Connect with me:
+- Twitter: [@hrisikesh_pal](https://twitter.com/hrisikesh_pal)
+- Instagram: [0dayvirus](https://www.instagram.com/0dayvirus)
+- YouTube: [JustHack_IT](https://www.youtube.com/@JustHack_IT)
+- Discord: [JustHack_IT](https://discord.com/invite/PUzR6YhXgR)
+
 > Copyright © 2023, VirusZzWarning
