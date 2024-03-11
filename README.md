@@ -86,7 +86,7 @@ This project was inspired by XDeadHackerX's The Spy's Job, which provided the fo
 
 Connect with me:
 - Twitter: [@hrisikesh_pal](https://twitter.com/hrisikesh_pal)
-- Instagram: [0dayvirus](https://www.instagram.com/0dayvirus)
+- Instagram: [viruszzwarning](https://www.instagram.com/viruszzwarning)
 - YouTube: [JustHack_IT](https://www.youtube.com/@JustHack_IT)
 - Discord: [JustHack_IT](https://discord.com/invite/PUzR6YhXgR)
 
