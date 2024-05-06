@@ -41,7 +41,7 @@ read -p "Choose an option: " opc1
 				sleep 1
 				echo "------------------------->""|"
 				echo "==========================="
-				sudo python blackbird.py -u $nick
+				sudo python3 blackbird.py -u $nick
 				cd ..
 				cd ..
 				;;
@@ -54,7 +54,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://www.google.com/search?q=%22$nick%22'"
+				xdg-open "https://www.google.com/search?q=%22$nick%22"
 				;;
 			3 )	echo
 				read -p "[*] Enter the Nickname, Alias or Nickname of the Target  : " nick
@@ -66,7 +66,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo " Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://www.idcrawl.com/u/$nick'"
+				xdg-open "https://www.idcrawl.com/u/$nick"
 				;;
 			4 )	echo
 				read -p "[*] Enter the Nickname, Alias or Nickname of the Target  : " nick
@@ -92,7 +92,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩(x_x) Social networks with Nickname $nick (x_x)⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩"
 				echo
-				sudo python blackbird.py -u $nick
+				sudo python3 blackbird.py -u $nick
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
@@ -110,7 +110,8 @@ read -p "Choose an option: " opc1
 				echo
 				echo " Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://www.google.com/search?q=%22$nick%22'" | su $user -c "firefox 'https://www.idcrawl.com/u/$nick'"
+				xdg-open "https://www.google.com/search?q=%22$nick%22" 
+				xdg-open "https://www.idcrawl.com/u/$nick"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;

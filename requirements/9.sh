@@ -1,6 +1,6 @@
 #!/bin/bash
 user=`cat requirements/configuration/.user_not_root.txt`
-
+export GTK_MODULES="${GTK_MODULES//atk-bridge/}"
 source requirements/0.sh
 
 Title
@@ -42,7 +42,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://www.google.com/imghp?hl=en&ogbl='"
+				xdg-open "https://www.google.com/imghp?hl=en&ogbl="
 				echo
 				;;
 			3 )	echo
@@ -50,7 +50,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://tineye.com'"
+				xdg-open "https://tineye.com"
 				echo
 				;;
 			4 )	echo
@@ -58,7 +58,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://imgupscaler.com/'"
+				xdg-open "https://imgupscaler.com/"
 				echo
 				;;
 			5 )	echo
@@ -93,7 +93,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser and All Tabs...."
 				sleep 2
-				su $user -c "firefox 'https://www.google.com/imghp?hl=en&ogbl='" | su $user -c "firefox 'https://tineye.com'" | su $user -c "firefox 'https://imgupscaler.com/'"
+				xdg-open "https://www.google.com/imghp?hl=en&ogbl=" | xdg-open "https://tineye.com" | xdg-open "https://imgupscaler.com/"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;

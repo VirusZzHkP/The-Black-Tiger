@@ -1,6 +1,6 @@
 #!/bin/bash
 user=`cat requirements/configuration/.user_not_root.txt`
-
+export GTK_MODULES="${GTK_MODULES//atk-bridge/}"
 source requirements/0.sh
 
 Title
@@ -78,7 +78,7 @@ read -p "Choose an option: " opc1
 							echo
 							echo "Opening Browser...."
 							sleep 2
-							su $user -c "firefox 'https://www.shodan.io/host/$ip'"
+							xdg-open "https://www.shodan.io/host/$ip"
 							echo
 							echo
 							echo "/\/\/\/\/\ If you use a VPN, it is likely that Option 1 will have incorrect ports /\/\/\/\/"
@@ -112,7 +112,7 @@ read -p "Choose an option: " opc1
 							echo
 							echo "Opening Browser...."
 							sleep 2
-							su $user -c "firefox 'https://www.shodan.io/host/$ip'"
+							xdg-open "https://www.shodan.io/host/$ip"
 							echo
 							echo
 							echo "/\/\/\/\/\If you use a VPN, it is likely that Option 1 and 2 will give the wrong ports. /\/\/\/\/"
@@ -127,7 +127,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://check-host.net/check-ping?host=$ip'"
+				xdg-open "https://check-host.net/check-ping?host=$ip"
 				;;
 			5 )	Title
 				echo "[7] Information about a Public IP"
@@ -190,7 +190,7 @@ read -p "Choose an option: " opc1
 							echo "______________________________________"
 							echo
 							echo "Opening the Browser (When the processes are completed)...."
-							#su $user -c "firefox 'https://www.shodan.io/host/$ip'"
+							xdg-open "https://www.shodan.io/host/$ip"
 							echo
 							echo
 							echo "/\/\/\/\/\ If you use a VPN, it is likely that Option 1 will have incorrect ports /\/\/\/\/"
@@ -223,7 +223,7 @@ read -p "Choose an option: " opc1
 							echo "______________________________________"
 							echo
 							echo "Opening the Browser (When the processes are completed)...."
-							#su $user -c "firefox 'https://www.shodan.io/host/$ip'"
+							xdg-open "https://www.shodan.io/host/$ip"
 							echo
 							echo
 							echo "/\/\/\/\/\If you use a VPN, it is likely that Option 1 and 2 will give the wrong ports. /\/\/\/\/"
@@ -242,7 +242,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser and All Tabs...."
 				sleep 2
-				su $user -c "firefox 'https://www.shodan.io/host/$ip'" | su $user -c "firefox 'https://check-host.net/check-ping?host=$ip'"
+				xdg-open "https://www.shodan.io/host/$ip" | xdg-open "https://check-host.net/check-ping?host=$ip"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
@@ -251,7 +251,7 @@ read -p "Choose an option: " opc1
 			* )	echo
 				echo "$RRPLY It is not a valid option"
 				sleep 1
-				bash requisitos/7.sh
+				bash requirements/7.sh
 	esac
 echo
 echo
@@ -265,7 +265,7 @@ read -p "Choose an option: " opc3
 	case $opc3 in
 			1 )	bash the_black_tiger.sh
 				;;
-			2 )	bash requisitos/7.sh
+			2 )	bash requirements/7.sh
 				;;
 			3 )	exit
 				;;

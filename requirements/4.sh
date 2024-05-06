@@ -1,5 +1,7 @@
 #!/bin/bash
 user=`cat requirements/configuration/.user_not_root.txt`
+export GTK_MODULES="${GTK_MODULES//atk-bridge/}"
+
 
 source requirements/0.sh
 
@@ -48,7 +50,7 @@ read -p "Choose an option: " opc1
 				echo "Opening Browser...."
 				echo
 				sleep 2
-				su $user -c "firefox 'https://github.com/$username'"
+				xdg-open "https://github.com/$username"
 				;;
 			2 )	echo
 				read -p "[*] Enter the username of the Target : " username
@@ -74,7 +76,7 @@ read -p "Choose an option: " opc1
 				echo "Opening Browser...."
 				echo
 				sleep 2
-				su $user -c "firefox 'https://www.picuki.com/profile/$username'" | su $user -c "firefox 'https://www.picnob.com/search/?q=$username'"
+				xdg-open "https://www.picuki.com/profile/$username" | xdg-open "https://www.picnob.com/search/?q=$username"
 				;;
 			3 )	echo
 				read -p "[*] Enter the username of the Target : " username
@@ -97,7 +99,7 @@ read -p "Choose an option: " opc1
 				echo "Opening Browser...."
 				echo
 				sleep 2
-				su $user -c "firefox 'https://urlebird.com/es/user/$username/'" | su $user -c "firefox 'https://www.tiktok.com/@$username'"
+				xdg-open "https://urlebird.com/es/user/$username/" | xdg-open "https://www.tiktok.com/@$username"
 				;;
 			4 )	echo
 				read -p "[*] Enter the username of the Target : " username
@@ -108,18 +110,18 @@ read -p "Choose an option: " opc1
 				echo
 				wget --wait=40 --limit-rate=40K -U Mozilla -bq https://nitter.net/$username -O requirements/results/Twitter-$username.txt >/dev/null
 				sleep 6
-				# echo "[*] User + Name: " `cat requirements/results/Twitter-$username.txt | awk -F= '/and:title/ {print $3}' | cut -c 2- | rev | cut -c5- | rev`
-				# echo "[*] Description: " `cat requirements/results/Twitter-$username.txt | awk -F= '/and:description/ {print $3}' | cut -c 2- | rev | cut -c5- | rev`
-				# echo "[*] Joined in: " `cat requirements/results/Twitter-$username.txt | awk -F= '/profile-joindate/ {print $3}' | cut -c 2- | rev | cut -c13- | rev`
-				# echo "[*] Tweets: " `cat requirements/results/Twitter-$username.txt | awk -F= '/profile-stat-num/ {print $2}' | cut -c 20- | rev | cut -c8- | rev | awk 'NR==1{print}'`
-				# echo "[*] Following: " `cat requirements/results/Twitter-$username.txt | awk -F= '/profile-stat-num/ {print $2}' | cut -c 20- | rev | cut -c8- | rev | awk 'NR==2{print}'`
-				# echo "[*] Followers: " `cat requirements/results/Twitter-$username.txt | awk -F= '/profile-stat-num/ {print $2}' | cut -c 20- | rev | cut -c8- | rev | awk 'NR==3{print}'`
-				# echo "[*] Likes: " `cat requirements/results/Twitter-$username.txt | awk -F= '/profile-stat-num/ {print $2}' | cut -c 20- | rev | cut -c8- | rev | awk 'NR==4{print}'`
-				# echo
-				# echo "[*] Profile picture: " `cat requirements/results/Twitter-$username.txt | awk -F= '/twitter:image:src/ {print $3}' | cut -c 2- | rev | cut -c5- | rev`
-				# echo
-				# echo "[*] Profile URL: https://nitter.net/$username"
-				# echo
+				echo "[*] User + Name: " `cat requirements/results/Twitter-$username.txt | awk -F= '/and:title/ {print $3}' | cut -c 2- | rev | cut -c5- | rev`
+				echo "[*] Description: " `cat requirements/results/Twitter-$username.txt | awk -F= '/and:description/ {print $3}' | cut -c 2- | rev | cut -c5- | rev`
+				echo "[*] Joined in: " `cat requirements/results/Twitter-$username.txt | awk -F= '/profile-joindate/ {print $3}' | cut -c 2- | rev | cut -c13- | rev`
+				echo "[*] Tweets: " `cat requirements/results/Twitter-$username.txt | awk -F= '/profile-stat-num/ {print $2}' | cut -c 20- | rev | cut -c8- | rev | awk 'NR==1{print}'`
+				echo "[*] Following: " `cat requirements/results/Twitter-$username.txt | awk -F= '/profile-stat-num/ {print $2}' | cut -c 20- | rev | cut -c8- | rev | awk 'NR==2{print}'`
+				echo "[*] Followers: " `cat requirements/results/Twitter-$username.txt | awk -F= '/profile-stat-num/ {print $2}' | cut -c 20- | rev | cut -c8- | rev | awk 'NR==3{print}'`
+				echo "[*] Likes: " `cat requirements/results/Twitter-$username.txt | awk -F= '/profile-stat-num/ {print $2}' | cut -c 20- | rev | cut -c8- | rev | awk 'NR==4{print}'`
+				echo
+				echo "[*] Profile picture: " `cat requirements/results/Twitter-$username.txt | awk -F= '/twitter:image:src/ {print $3}' | cut -c 2- | rev | cut -c5- | rev`
+				echo
+				echo "[*] Profile URL: https://nitter.net/$username"
+				echo
 				fetch_user_details() {
 				url="https://nitter.net/$1"
 				curl -s "$url" | pup 'meta[name="description"] attr{content}' | {
@@ -150,7 +152,7 @@ read -p "Choose an option: " opc1
 				echo "Opening Browser...."
 				echo
 				sleep 2
-				su $user -c "firefox 'https://nitter.net/$username'"
+				xdg-open "https://nitter.net/$username"
 				;;
 			5 )	echo
 				read -p "[*] Enter the username of the Target : " username
@@ -171,7 +173,7 @@ read -p "Choose an option: " opc1
 				echo "Opening Browser...."
 				echo
 				sleep 2
-				su $user -c "firefox 'https://www.twitch.tv/$username'"
+				xdg-open "https://www.twitch.tv/$username"
 				;;
 			6 )	echo
 				read -p "[*] Enter the username of the Target : " username
@@ -192,7 +194,7 @@ read -p "Choose an option: " opc1
 				echo "Opening Browser...."
 				echo
 				sleep 2
-				su $user -c "firefox 'https://t.me/$username'"
+				xdg-open "https://t.me/$username"
 				;;
 			7 )	echo
 				read -p "[*] Enter the username of the Target : " username
@@ -219,7 +221,7 @@ read -p "Choose an option: " opc1
 				echo "Opening the Browser...."
 				echo
 				sleep 2
-				#su $user -c "firefox 'https://github.com/$username'"
+				xdg-open "https://github.com/$username"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
@@ -247,7 +249,7 @@ read -p "Choose an option: " opc1
 				echo "[*] Profile URL: https://www.instagram.com/$username"
 				echo
 				sleep 2
-				#su $user -c "firefox 'https://www.picuki.com/profile/$username'" | su $user -c "firefox 'https://www.picnob.com/search/?q=$username'"
+				xdg-open "https://www.picuki.com/profile/$username" | xdg-open "https://www.picnob.com/search/?q=$username"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
@@ -274,7 +276,7 @@ read -p "Choose an option: " opc1
 				echo "Opening the Browser...."
 				echo
 				sleep 2
-				#su $user -c "firefox 'https://urlebird.com/es/user/$username/'" | su $user -c "firefox 'https://www.tiktok.com/@$username'"
+				xdg-open "https://urlebird.com/es/user/$username/" | xdg-open "https://www.tiktok.com/@$username"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
@@ -302,7 +304,7 @@ read -p "Choose an option: " opc1
 				echo "[*] Profile URL: https://nitter.net/$username"
 				echo
 				echo "Opening the Browser...."
-				#su $user -c "firefox 'https://nitter.net/$username'"
+				xdg-open "https://nitter.net/$username"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
@@ -326,7 +328,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening the Browser...."
 				sleep 2
-				#su $user -c "firefox 'https://www.twitch.tv/$username'"
+				xdg-open "https://www.twitch.tv/$username"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
@@ -349,7 +351,7 @@ read -p "Choose an option: " opc1
 				echo "[*] Profile URL: https://t.me/$username"
 				echo
 				echo "Opening the Browser...."
-				su $user -c "firefox 'https://github.com/$username'" | su $user -c "firefox 'https://www.picuki.com/profile/$username'" | su $user -c "firefox 'https://www.picnob.com/search/?q=$username'" | su $user -c "firefox 'https://urlebird.com/es/user/$username/'" | su $user -c "firefox 'https://www.tiktok.com/@$username'" | su $user -c "firefox 'https://nitter.net/$username'" | su $user -c "firefox 'https://www.twitch.tv/$username'" | su $user -c "firefox 'https://t.me/$username'"
+				xdg-open "https://github.com/$username" | xdg-open "https://www.picuki.com/profile/$username" | xdg-open "https://www.picnob.com/search/?q=$username" | xdg-open "https://urlebird.com/es/user/$username/" | xdg-open "https://www.tiktok.com/@$username" | xdg-open "https://nitter.net/$username" | xdg-open "https://www.twitch.tv/$username" | xdg-open "https://t.me/$username'"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;

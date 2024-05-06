@@ -13,6 +13,7 @@ echo "                                [6] Telephone Number Information   🔍"
 echo "                                [7] Public IP Information          🔍"
 echo "                                [8] YouTube Video/Channel Information  🔍"
 echo "                                [9] Image Information            🔍"
+echo "                                [10] Record Search            🔍"
 echo "                                [99] -------------> Exit"" <--------------- 🔍"
 echo
 read -p "[*] Choose an option: " opc1
@@ -37,7 +38,10 @@ read -p "[*] Choose an option: " opc1
 				;;
 			9 )	bash requirements/9.sh
 				;;
-			99 )	exit
+			10 )	bash requirements/10.sh
+				;;
+			99 ) echo "Thanks for using 'the black tiger', made with love VirusZzWarning."
+				exit
 				;;
 			* )	echo
 				echo "$RRPLY It is not a valid option"

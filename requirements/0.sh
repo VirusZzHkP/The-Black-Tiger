@@ -7,13 +7,15 @@ function Title {
 	echo     
 	echo "		                                         "
 	echo "				X0╔╦╗┬ ┬┌─┐  ╔╗ ┬  ┌─┐┌─┐┬┌─  ╔╦╗┬┌─┐┌─┐┬─┐0X"
-	echo "				101║ ├─┤├┤   ╠╩╗│  ├─┤│  ├┴┐   ║ ││ ┬├┤ ├┬┘101"
-	echo "				 v1╩ ┴ ┴└─┘  ╚═╝┴─┘┴ ┴└─┘┴ ┴   ╩ ┴└─┘└─┘┴└─01"
+	echo "				111║ ├─┤├┤   ╠╩╗│  ├─┤│  ├┴┐   ║ ││ ┬├┤ ├┬┘111"
+	echo "				 v1╩ ┴ ┴└─┘  ╚═╝┴─┘┴ ┴└─┘┴ ┴   ╩ ┴└─┘└─┘┴└─11"
 	echo "				--------◤M@d3 With ❤ : VirusZzWarning◥--------             "   
+	echo "			     -----------------------------------------------------  "   
+	echo "		              Privacy is dead, & socialmedia holds the smoking gun          " 
 	echo "				----------------------------------------------  "   
-	echo "				    Any action and or activity related to          " 
-	echo "				The Black Tiger is solely your responsibility      " 
-	echo "				----------------------------------------------  "   
+	echo "				Twitter: https://www.twitter.com/hrisikesh_pal      "
+	echo "			      Instagram: https://www.instagram.com/viruszzwarning      "  
+	echo "			     -----------------------------------------------------  "   
 	echo ""
 	
 }
@@ -81,8 +83,9 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
 					sudo apt install gedit -y
 					sudo apt install wpscan -y
 					sudo apt install firefox-esr -y
+					sudo apt-get install libcanberra-gtk-module
 					sudo pip3 install zoomeye
-
+					sudo apt-get install tor torsocks
 					sudo rm -r Cloudmare
 					sudo rm -r blackbird
 					sudo rm -r osgint

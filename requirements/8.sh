@@ -1,6 +1,6 @@
 #!/bin/bash
 user=`cat requirements/configuration/.user_not_root.txt`
-
+export GTK_MODULES="${GTK_MODULES//atk-bridge/}"
 source requirements/0.sh
 
 Title
@@ -26,9 +26,9 @@ read -p "Choose an option: " opc1
 				echo "################################################################"
 				echo
 				echo "Opening Browser...."
-                echo
+                		echo
 				sleep 2
-                su $user -c "firefox 'https://mattw.io/youtube-metadata/?url=$link&submit=true'"
+               			xdg-open "https://mattw.io/youtube-metadata/?url=$link&submit=true"
 
 				;;
 			2 )	echo
@@ -39,9 +39,9 @@ read -p "Choose an option: " opc1
 				echo "################################################################"
 				echo
 				echo "Opening Browser...."
-                echo
+                		echo
 				sleep 2
-                su $user -c "firefox 'https://mattw.io/youtube-metadata/bulk?url=$link&submit=true'"
+                		xdg-open "https://mattw.io/youtube-metadata/bulk?url=$link&submit=true"
 				;;
 			3 )	echo
 				read -p "[*] Paste the Link/URL of the Video or YouTube Channel: " link
@@ -53,9 +53,9 @@ read -p "Choose an option: " opc1
 				echo "################################################################"
 				echo
 				echo "Opening the Browser (When the processes are completed)...."
-                echo
+                		echo
 				sleep 2
-                #su $user -c "firefox 'https://mattw.io/youtube-metadata/?url=$link&submit=true'"
+               			xdg-open "https://mattw.io/youtube-metadata/?url=$link&submit=true"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
@@ -69,9 +69,9 @@ read -p "Choose an option: " opc1
 				echo "################################################################"
 				echo
 				echo "Abriendo Navegador y Todas las Pestañas...."
-                echo
+                		echo
 				sleep 2
-                su $user -c "firefox 'https://mattw.io/youtube-metadata/?url=$link&submit=true'" | su $user -c "firefox 'https://mattw.io/youtube-metadata/bulk?url=$link&submit=true'"
+                		xdg-open "https://mattw.io/youtube-metadata/?url=$link&submit=true" | xdg-open "https://mattw.io/youtube-metadata/bulk?url=$link&submit=true"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;

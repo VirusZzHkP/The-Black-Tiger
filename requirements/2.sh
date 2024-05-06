@@ -1,5 +1,6 @@
 #!/bin/bash
 user=`cat requirements/configuration/.user_not_root.txt`
+export GTK_MODULES="${GTK_MODULES//atk-bridge/}"
 
 source requirements/0.sh
 
@@ -30,7 +31,8 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://www.google.com/search?q=%22$name+$midname+$lname%22'" | su $user -c "firefox 'https://www.google.com/search?q=%22$name+$midname+$lname%22+$info'" 
+				xdg-open "https://www.google.com/search?q=%22$name+$midname+$lname%22" 
+				xdg-open "https://www.google.com/search?q=%22$name+$midname+$lname%22+$info" 
 				;;
 			2 )	echo
 				read -p "[*] Write the name of the Objective (Ex: John): " name
@@ -43,7 +45,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://www.idcrawl.com/$name-$midname-$lname'"
+				xdg-open "https://www.idcrawl.com/$name-$midname-$lname"
 				;;
 			3 )	echo
 				read -p "[*] Write the Name of the Objective (Ex: John): " name
@@ -71,7 +73,9 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://www.google.com/search?q=%22$name+$midname+$lname%22'" | su $user -c "firefox 'https://www.google.com/search?q=%22$name+$midname+$lname%22+$info'" | su $user -c "firefox 'https://www.idcrawl.com/$name-$midname-$lname'"
+				xdg-open "https://www.google.com/search?q=%22$name+$midname+$lname%22" 
+				xdg-open "https://www.google.com/search?q=%22$name+$midname+$lname%22+$info" 
+				xdg-open "https://www.idcrawl.com/$name-$midname-$lname"
 				;;
 			4 )	bash the_black_tiger.sh
 				;;

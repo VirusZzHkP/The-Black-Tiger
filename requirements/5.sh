@@ -1,5 +1,7 @@
 #!/bin/bash
+
 user=`cat requirements/configuration/.user_not_root.txt`
+export GTK_MODULES="${GTK_MODULES//atk-bridge/}"
 
 source requirements/0.sh
 
@@ -17,7 +19,7 @@ echo "[4] Use Google Dorks (See where the Email has been published)""    |"
 echo "-------------------------------------------------------------------"
 echo "[5] Verify if the Email exists""                                   |"
 echo "-------------------------------------------------------------------"
-echo "[6] All (Info, Verificar Email, 121 redes, Google Dorks)""         |"
+echo "[6] All (Info, Check Email, 121 Networks, Google Dorks)""         |"
 echo "-------------------------------------------------------------------"
 echo "[7] Back to menu""                                                 |"
 echo "==================================================================="
@@ -41,7 +43,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 3
-				su $user -c "firefox 'https://epieos.com/?q=$email'"
+				xdg-open "https://epieos.com/?q=$email"
 				;;
 			2 )	echo
 				read -p "[*] Enter the Email of the Target [Gmail, Yahoo, Outlook]: " email
@@ -73,14 +75,14 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://www.google.com/search?q=%22$email%22'"
+				xdg-open "https://www.google.com/search?q=%22$email%22"
 				;;
 			5 )	echo
 				echo "Enter the email address of the target below: "
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://verify-email.org'"
+				xdg-open "https://verify-email.org"
 				;;
 			6 )	echo
 				read -p "[*] Enter the Email of the Target [Gmail, Yahoo, Outlook]: " email
@@ -100,7 +102,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				#su $user -c "firefox 'https://epieos.com/?q=$email'"
+				xdg-open "https://epieos.com/?q=$email"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
@@ -143,7 +145,7 @@ read -p "Choose an option: " opc1
 				echo "######################################"
 				echo
 				echo "Opening the Browser....."
-				#su $user -c "firefox 'https://www.google.com/search?q=%22$email%22'"
+				xdg-open "https://www.google.com/search?q=%22$email%22"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
@@ -158,7 +160,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser and All Tabs...."
 				sleep 2
-				su $user -c "firefox 'https://epieos.com/?q=$email'" | su $user -c "firefox 'https://www.google.com/search?q=%22$email%22'" | su $user -c "firefox 'https://verify-email.org'"
+				xdg-open "https://epieos.com/?q=$email" | xdg-open "firefox 'https://www.google.com/search?q=%22$email%22" | xdg-open "firefox 'https://verify-email.org"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;

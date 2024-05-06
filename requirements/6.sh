@@ -1,7 +1,7 @@
 #!/bin/bash
 api=`cat requirements/configuration/.api_phone.txt`
 user=`cat requirements/configuration/.user_not_root.txt`
-
+export GTK_MODULES="${GTK_MODULES//atk-bridge/}"
 source requirements/0.sh
 
 Title
@@ -25,7 +25,7 @@ read -p "Choose an option: " opc1
 	case $opc1 in
 			1 )	echo
 				read -p "[*] Write the country code of the Target Phone (Ex: 91): " code
-				read -p "[*] Write the phone number of the Target (Ex: 9578463763): " phone
+				read -p "[*] Write the phone number of the Target (Ex: 1234567890): " phone
 				echo
 				echo "#############################"
 				echo "[☢] Phone: +$code $phone"
@@ -57,14 +57,14 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://www.google.com/search?q=%22+$code$phone%22'" | su $user -c "firefox 'https://www.google.com/search?q=%22+$code$phone%22+$info'"
+				xdg-open "https://www.google.com/search?q=%22+$code$phone%22" | xdg-open "https://www.google.com/search?q=%22+$code$phone%22+$info"
 				;;
 			4 )	echo
 				echo "Next, write the phone number on the Web, choose the Country and fill out the captcha that appear when you click search"
 				echo
 				echo "Opening Browser...."
 				sleep 3
-				su $user -c "firefox 'https://www.truecaller.com'"
+				xdg-open "https://www.truecaller.com'"
 				;;
 			5 )	echo
 				read -p "[*] Write the country code of the Target Phone (Ex: 91): " code
@@ -108,8 +108,8 @@ read -p "Choose an option: " opc1
 				echo "#############################"
 				echo
 				echo "Opening the Browser...."
-				#su $user -c "firefox 'https://www.google.com/search?q=%22+$code$phone%22'"
-				#su $user -c "firefox 'https://www.google.com/search?q=%22+$code$phone%22+$info'"
+				xdg-open "https://www.google.com/search?q=%22+$code$phone%22"
+				xdg-open "https://www.google.com/search?q=%22+$code$phone%22+$info"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
@@ -126,7 +126,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening the Browser...."
 				sleep 2
-				su $user -c "firefox 'https://www.google.com/search?q=%22+$code$phone%22'" | su $user -c "firefox 'https://www.google.com/search?q=%22+$code$phone%22+$info'" | su $user -c "firefox 'https://www.truecaller.com'"
+				xdg-open "https://www.google.com/search?q=%22+$code$phone%22" | xdg-open "https://www.google.com/search?q=%22+$code$phone%22+$info" | xdg-open "https://www.truecaller.com"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;

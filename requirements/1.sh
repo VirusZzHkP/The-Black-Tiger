@@ -1,5 +1,6 @@
 #!/bin/bash
 user=`cat requirements/configuration/.user_not_root.txt`
+export GTK_MODULES="${GTK_MODULES//atk-bridge/}"
 
 source requirements/0.sh
 
@@ -115,7 +116,10 @@ read -p "Choose an option: " opc1
 				echo "/\/\/\/\/\ If you use a VPN, it is likely that Option 1 will have incorrect ports /\/\/\/\/"
 				echo
 				echo "[*] Host Servers, DNS, MX, TXT (Put the Domain in dnsdumpster.com): "
-				su $user -c "firefox 'https://www.shodan.io/host/$ip'" | su $user -c "firefox 'https://dnsdumpster.com'"
+				xdg-open "https://www.shodan.io/host/$ip"
+				xdg-open "https://dnsdumpster.com"
+
+
 				echo
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
@@ -130,7 +134,7 @@ read -p "Choose an option: " opc1
 				echo "######################################"
 				echo
 				cd requirements/Cloudmare
-				sudo python Cloudmare.py -u $domain
+				sudo python3 Cloudmare.py -u $domain
 				cd ..
 				cd ..
 				echo
@@ -257,7 +261,9 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://www.google.com/search?q=%22$domain%22'" | su $user -c "firefox 'https://www.google.com/search?q=site%3A$domain'"
+				xdg-open "https://www.google.com/search?q=%22$domain%22"
+				xdg-open "https://www.google.com/search?q=site%3A$domain"
+
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
@@ -272,7 +278,7 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser...."
 				sleep 2
-				su $user -c "firefox 'https://check-host.net/check-http?host=$domain'"
+				xdg-open "https://check-host.net/check-http?host=$domain"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
@@ -349,7 +355,7 @@ read -p "Choose an option: " opc1
 				echo "_________________________________________________"
 				echo
 				echo "Opening the Browser (When the processes are completed)...."
-				#su $user -c "firefox 'https://www.shodan.io/host/$ip'"
+				xdg-open "https://www.shodan.io/host/$ip"
 				echo
 				echo
 				echo "/\/\/\/\/\ If you use a VPN, it is likely that Option 1 will have incorrect ports /\/\/\/\/"
@@ -357,7 +363,7 @@ read -p "Choose an option: " opc1
 				echo "[*] Host Servers, DNS, MX, TXT (Put the Domain in dnsdumpster.com): "
 				echo
 				echo "Opening the Browser (When the processes are completed)...."
-				#su $user -c "firefox 'https://dnsdumpster.com'"
+				xdg-open "https://dnsdumpster.com"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
@@ -490,7 +496,8 @@ read -p "Choose an option: " opc1
 				echo "######################################"
 				echo
 				echo "Opening the Browser (When the processes are completed)...."
-				#su $user -c "firefox 'https://www.google.com/search?q=%22$domain%22'" | su $user -c "firefox 'https://www.google.com/search?q=site%3A$domain'"
+				xdg-open "https://www.google.com/search?q=%22$domain%22" 
+				xdg-open "https://www.google.com/search?q=site%3A$domain"
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				echo
@@ -505,7 +512,12 @@ read -p "Choose an option: " opc1
 				echo
 				echo "Opening Browser and All Tabs...."
 				sleep 2
-				su $user -c "firefox 'https://www.shodan.io/host/$ip'" | su $user -c "firefox 'https://dnsdumpster.com'" | su $user -c "firefox 'https://www.google.com/search?q=%22$domain%22'" | su $user -c "firefox 'https://www.google.com/search?q=site%3A$domain'" | su $user -c "firefox 'https://check-host.net/check-http?host=$domain'"
+				xdg-open "https://www.shodan.io/host/$ip"
+				xdg-open "https://dnsdumpster.com"
+				xdg-open "https://www.google.com/search?q=%22$domain%22"
+				xdg-open "https://www.google.com/search?q=site%3A$domain"
+				xdg-open "https://check-host.net/check-http?host=$domain"
+
 				echo
 				echo "⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧"
 				;;
