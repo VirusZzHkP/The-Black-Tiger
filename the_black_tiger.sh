@@ -40,7 +40,8 @@ read -p "[*] Choose an option: " opc1
 				;;
 			10 ) bash requirements/10.sh
 				;;
-			99 ) echo "Thanks for using The-Black-tiger!! M@d3 With Love - VirusZzWarning"	exit
+			99 ) echo "Thanks for using The-Black-tiger!! M@d3 With Love - VirusZzWarning"	
+				exit
 				;;
 			* )	echo
 				echo "$RRPLY It is not a valid option"
