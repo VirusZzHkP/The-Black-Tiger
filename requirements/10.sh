@@ -8,6 +8,7 @@ export XDG_RUNTIME_DIR="/run/user/$(id -u root)"
 
 # Disable the canberra-gtk-module
 export GTK_MODULES=canberra-gtk-module
+export GTK_USE_PORTAL=1
 
 user=`cat requirements/configuration/.user_not_root.txt`
 
@@ -17,7 +18,6 @@ Title
 echo "[10] Record Search"
 echo
 echo "==================================================================="
-<<<<<<< HEAD
 echo "[1] Search by Email""                                    |"
 echo "-------------------------------------------------------------------"
 echo "[2] Search by Username""                                 |"
@@ -39,29 +39,6 @@ echo "-------------------------------------------------------------------"
 echo "[10] Search by Birth Year""                               |"
 echo "-------------------------------------------------------------------"
 echo "[11] Back to menu""                                       |"
-=======
-echo "[1] Search by Email""                                              |"
-echo "-------------------------------------------------------------------"
-echo "[2] Search by Username""                                           |"
-echo "-------------------------------------------------------------------"
-echo "[3] Search by License Plate""                                      |"
-echo "-------------------------------------------------------------------"
-echo "[4] Search by First Name""                                         |"
-echo "-------------------------------------------------------------------"
-echo "[5] Search by Last Name""                                          |"
-echo "-------------------------------------------------------------------"
-echo "[6] Search by Password""                                           |"
-echo "-------------------------------------------------------------------"
-echo "[7] Search by Domain Name""                                        |"
-echo "-------------------------------------------------------------------"
-echo "[8] Search by IP Address""                                         |"
-echo "-------------------------------------------------------------------"
-echo "[9] Search by Address""                                            |"
-echo "-------------------------------------------------------------------"
-echo "[10] Search by Birth Year""                                        |"
-echo "-------------------------------------------------------------------"
-echo "[11] Back to menu""                                                |"
->>>>>>> a65ec0982235d4bd77a8fb00e139405a06eed26b
 echo "==================================================================="
 echo
 read -p "Choose an option: " opc1
@@ -73,11 +50,8 @@ case $opc1 in
         echo "[☢] Email: $search_email"
         echo "######################################"
         echo
-<<<<<<< HEAD
-        xdg-open "https://search.0t.rocks/records?emails=$search_email&exact=true" 2>/dev/null
-=======
-        su $user -c "firefox 'https://search.0t.rocks/records?emails=$search_email&exact=true'" 2>/dev/null
->>>>>>> a65ec0982235d4bd77a8fb00e139405a06eed26b
+        xdg-open "https://search.0t.rocks/records?emails=$search_email&exact=true" 
+        su $user -c "firefox 'https://search.0t.rocks/records?emails=$search_email&exact=true'" 
         ;;
     2 ) echo
         read -p "[*] Enter the Username to search for: " search_username
@@ -86,11 +60,8 @@ case $opc1 in
         echo "[☢] Username: $search_username"
         echo "######################################"
         echo
-<<<<<<< HEAD
-        xdg-open "https://search.0t.rocks/records?usernames=$search_username&exact=true" 2>/dev/null
-=======
-        su $user -c "firefox 'https://search.0t.rocks/records?usernames=$search_username&exact=true'" 2>/dev/null
->>>>>>> a65ec0982235d4bd77a8fb00e139405a06eed26b
+        xdg-open "https://search.0t.rocks/records?usernames=$search_username&exact=true" 
+        su $user -c "firefox 'https://search.0t.rocks/records?usernames=$search_username&exact=true'" 
         ;;
     3 ) echo
         read -p "[*] Enter the License Plate to search for: " search_plate
@@ -99,11 +70,8 @@ case $opc1 in
         echo "[☢] License Plate: $search_plate"
         echo "######################################"
         echo
-<<<<<<< HEAD
-        xdg-open "https://search.0t.rocks/records?VRN=$search_plate&exact=true" 2>/dev/null
-=======
-        su $user -c "firefox 'https://search.0t.rocks/records?VRN=$search_plate&exact=true'" 2>/dev/null
->>>>>>> a65ec0982235d4bd77a8fb00e139405a06eed26b
+        xdg-open "https://search.0t.rocks/records?VRN=$search_plate&exact=true"
+        su $user -c "firefox 'https://search.0t.rocks/records?VRN=$search_plate&exact=true'" 
         ;;
     4 ) echo
         read -p "[*] Enter the First Name to search for: " search_first_name
@@ -112,11 +80,9 @@ case $opc1 in
         echo "[☢] First Name: $search_first_name"
         echo "######################################"
         echo
-<<<<<<< HEAD
-        xdg-open "https://search.0t.rocks/records?firstName=$search_first_name&exact=true" 2>/dev/null
-=======
-        su $user -c "firefox 'https://search.0t.rocks/records?firstName=$search_first_name&exact=true'" 2>/dev/null
->>>>>>> a65ec0982235d4bd77a8fb00e139405a06eed26b
+
+        xdg-open "https://search.0t.rocks/records?firstName=$search_first_name&exact=true" 
+        su $user -c "firefox 'https://search.0t.rocks/records?firstName=$search_first_name&exact=true'" 
         ;;
     5 ) echo
         read -p "[*] Enter the Last Name to search for: " search_last_name
@@ -125,11 +91,8 @@ case $opc1 in
         echo "[☢] Last Name: $search_last_name"
         echo "######################################"
         echo
-<<<<<<< HEAD
-        xdg-open "https://search.0t.rocks/records?lastName=$search_last_name&exact=true" 2>/dev/null
-=======
-        su $user -c "firefox 'https://search.0t.rocks/records?lastName=$search_last_name&exact=true'" 2>/dev/null
->>>>>>> a65ec0982235d4bd77a8fb00e139405a06eed26b
+        xdg-open "https://search.0t.rocks/records?lastName=$search_last_name&exact=true"
+        su $user -c "firefox 'https://search.0t.rocks/records?lastName=$search_last_name&exact=true'" 
         ;;
     6 ) echo
         read -p "[*] Enter the Password to search for: " search_password
@@ -138,11 +101,8 @@ case $opc1 in
         echo "[☢] Password: $search_password"
         echo "######################################"
         echo
-<<<<<<< HEAD
-        xdg-open "https://search.0t.rocks/records?passwords=$search_password&exact=true" 2>/dev/null
-=======
-        su $user -c "firefox 'https://search.0t.rocks/records?passwords=$search_password&exact=true'" 2>/dev/null
->>>>>>> a65ec0982235d4bd77a8fb00e139405a06eed26b
+        xdg-open "https://search.0t.rocks/records?passwords=$search_password&exact=true" 
+        su $user -c "firefox 'https://search.0t.rocks/records?passwords=$search_password&exact=true'" 
         ;;
     7 ) echo
         read -p "[*] Enter the Domain Name to search for: " search_domain
@@ -151,11 +111,8 @@ case $opc1 in
         echo "[☢] Domain Name: $search_domain"
         echo "######################################"
         echo
-<<<<<<< HEAD
-        xdg-open "https://search.0t.rocks/records?domain=$search_domain&exact=true" 2>/dev/null
-=======
-        su $user -c "firefox 'https://search.0t.rocks/records?domain=$search_domain&exact=true'" 2>/dev/null
->>>>>>> a65ec0982235d4bd77a8fb00e139405a06eed26b
+        xdg-open "https://search.0t.rocks/records?domain=$search_domain&exact=true"
+        su $user -c "firefox 'https://search.0t.rocks/records?domain=$search_domain&exact=true'" 
         ;;
     8 ) echo
         read -p "[*] Enter the IP Address to search for (e.g., XXX.XXX.XXX.XXX): " search_ip
@@ -164,11 +121,9 @@ case $opc1 in
         echo "[☢] IP Address: $search_ip"
         echo "######################################"
         echo
-<<<<<<< HEAD
-        xdg-open "https://search.0t.rocks/records?ips=$search_ip&exact=true" 2>/dev/null
-=======
-        su $user -c "firefox 'https://search.0t.rocks/records?ips=$search_ip&exact=true'" 2>/dev/null
->>>>>>> a65ec0982235d4bd77a8fb00e139405a06eed26b
+        xdg-open "https://search.0t.rocks/records?ips=$search_ip&exact=true" 
+        su $user -c "firefox 'https://search.0t.rocks/records?ips=$search_ip&exact=true'" 
+
         ;;
     9 ) echo
         read -p "[*] Enter the Address to search for: " search_address
@@ -177,11 +132,9 @@ case $opc1 in
         echo "[☢] Address: $search_address"
         echo "######################################"
         echo
-<<<<<<< HEAD
-        xdg-open "https://search.0t.rocks/records?address=$search_address" 2>/dev/null
-=======
-        su $user -c "firefox 'https://search.0t.rocks/records?address=$search_address'" 2>/dev/null
->>>>>>> a65ec0982235d4bd77a8fb00e139405a06eed26b
+        xdg-open "https://search.0t.rocks/records?address=$search_address" 
+        su $user -c "firefox 'https://search.0t.rocks/records?address=$search_address'" 
+
         ;;
     10 ) echo
         read -p "[*] Enter the Birth Year to search for: " search_birth_year
@@ -190,11 +143,8 @@ case $opc1 in
         echo "[☢] Birth Year: $search_birth_year"
         echo "######################################"
         echo
-<<<<<<< HEAD
-        xdg-open "https://search.0t.rocks/records?birthYear=$search_birth_year" 2>/dev/null
-=======
-        su $user -c "firefox 'https://search.0t.rocks/records?birthYear=$search_birth_year'" 2>/dev/null
->>>>>>> a65ec0982235d4bd77a8fb00e139405a06eed26b
+        xdg-open "https://search.0t.rocks/records?birthYear=$search_birth_year"
+        su $user -c "firefox 'https://search.0t.rocks/records?birthYear=$search_birth_year'" 
         ;;
     11 ) bash the_black_tiger.sh
         ;;
@@ -221,4 +171,3 @@ case $opc2 in
     * ) echo
         echo "$RRPLY It is not a valid option"
 esac
-
