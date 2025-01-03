@@ -3,20 +3,22 @@
 source requirements/0.sh
 
 Title
-echo "                                [0] ==>Install and Configure Requirements<==    🔍"
-echo "                                [1] Information about a Website/Company         🔍"
-echo "                                [2] Information of a Person                     🔍"
-echo "                                [3] Information about a Nickname/Alias/Nickname 🔍"
-echo "                                [4] Information from a Social Network           🔍"
-echo "                                [5] Email Information                           🔍"
-echo "                                [6] Telephone Number Information                🔍"
-echo "                                [7] Public IP Information                       🔍"
-echo "                                [8] YouTube Video/Channel Information           🔍"
-echo "                                [9] Image Information                           🔍"
-echo "                                [10] Record Search                              🔍"
-echo "                                [99] ----------------> Exit"" <------------------ "
-echo
+echo -e "\n\033[1;32m                               [0] ==>Install and Configure Requirements<==    🛠"
+echo "                               [1] Information about a Website/Company         🔍"
+echo "                               [2] Information of a Person                     🔍"
+echo "                               [3] Information about a Nickname/Alias/Nickname 🔍"
+echo "                               [4] Information from a Social Network           🔍"
+echo "                               [5] Email Information                           🔍"
+echo "                               [6] Telephone Number Information                🔍"
+echo "                               [7] Public IP Information                       🔍"
+echo "                               [8] YouTube Video/Channel Information           🔍"
+echo "                               [9] Image Information                           🔍"
+echo "                               [10] Record Search                              🔍"
+echo "                               [11] Threat Intelligence                        🔍"
+echo -e "\033[1;31m                               [99] ----------------> Exit"" <------------------\033[0m "
+echo -e "\033[0;96m"
 read -p "[*] Choose an option: " opc1
+echo -e "\033[0"
 	case $opc1 in
 			0 )	bash requirements/0.sh
 				;;
@@ -38,9 +40,11 @@ read -p "[*] Choose an option: " opc1
 				;;
 			9 )	bash requirements/9.sh
 				;;
-			10 ) bash requirements/10.sh
+			10 )    bash requirements/10.sh
 				;;
-			99 ) echo "Thanks for using The-Black-tiger!! M@d3 With Love - VirusZzWarning"	
+			11 )    bash requirements/11.sh
+				;;
+			99 ) echo -e "\033[1;33mThanks for using The-Black-tiger!! M@d3 With Love - VirusZzWarning\033[0m"	
 				exit
 				;;
 			* )	echo
