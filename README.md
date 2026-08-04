@@ -11,6 +11,12 @@
 **The_Black_Tiger** tool is focused on* **OSINT** *almost all areas* **(People, Nicknames, Social Networks, Emails, Phone Numbers, Web Pages, Public IPs and Images)** *My idea was to collect and automate all the most Advanced OSINT techniques possible in a single Tool and thus work in the most comfortable and fast way possible, since we only have to give a couple of clicks and it will only start collecting and displaying in an orderly and classified manner all the information. All Sections are separated into parts in case you only want to extract a specific type of information, but it also has the penultimate option that combines all the Options so that it can extract everything it is capable of from the data that we have entered. Tell you that I will be updating the repository, adding new things and solving errors.
 
  **[I AM NOT RESPONSIBLE FOR THE MISUSE OF THIS TOOL]**
+---
+
+TheBlackTiger-(BETA) live : [Terminal Access](https://theblacktiger.justhackit.in)
+> To launch the terminal visit the above mentioned site and click on the launch button.
+
+
 
 ---
 
